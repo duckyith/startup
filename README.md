@@ -1,4 +1,4 @@
-# Your startup name here
+# Brady's Startup Idea
 
 [My Notes](notes.md)
 
