@@ -1,4 +1,4 @@
-# Brady's Startup Idea (try 2)
+# Brady's Startup Idea (try 3, change on github)
 
 [My Notes](notes.md)
 
