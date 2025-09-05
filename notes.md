@@ -1,5 +1,16 @@
 # CS 260 Notes (changed)
 
+MY NOTES
+I'm still cautious about what I should change in all these documents and just kind of throwing myself into the deepend here but I learned a couple things from this. Most notably:
+The commands
+- git add
+- git commit
+- git push
+- git fetch
+- git status
+- git pull
+and some general concepts of how to clone and use the repositories
+
 [My startup - Simon](https://simon.cs260.click)
 
 ## Helpful links
