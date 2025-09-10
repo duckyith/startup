@@ -33,15 +33,32 @@ Here is some examples of what the game will look like including the main screen 
 ```mermaid
 sequenceDiagram
     actor You
-    actor Website
-    You->>Website: Replace this with your design
+    You->>Main Screen: clicks on link
+    Main Screen->>Host screen: Click: host a game (back option)
+    Host screen->>Main Screen:
+    Main Screen->>Info page: Click: more (back option)
+    Info page->>Main Screen:
+    Main Screen->>Waiting screen: enter code and select username (back option)
+    Waiting screen->>Main Screen:
+    Waiting screen->>Drawing!:GAME STARTS
+    Drawing!->>voting screen:TIMES UP!
+    voting screen->>Waiting screen:
+    voting screen->>Main Screen: ELIMINATED! (or quit)
+
 ```
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Home screen
+- host options
+- more information page
+- game codes and usernames
+- connecting to game host
+- random promps from api
+- drawing capabilities
+- timer
+- voting
+- game win conditions
 
 ### Technologies
 
