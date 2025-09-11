@@ -67,7 +67,7 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Basic structure of Words and logos and hypertext to other pages
 - **CSS** - Adding lots of cute pictures, colors and backround images to make it more fun and attractive
 - **React** - Drawing and voting capabilities
-- **Service** - sending information like the drawings and vote results to host
+- **Service** - sending information like the drawings and vote results to host, as well as a call to a third party website that give the prompts
 - **DB/Login** - saved sample drawings from games to show off
 - **WebSocket** - realtime data going back and forth (mostly to host)
 
