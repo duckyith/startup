@@ -30,9 +30,8 @@ No problems worked just like it said in the [instruction](https://github.com/web
 
 ## HTML
 
-This was easy. I was careful to use the correct structural elements such as header, footer, main, nav, and form. The links between the three views work great using the `a` element.
-
-The part I didn't like was the duplication of the header and footer code. This is messy, but it will get cleaned up when I get to React.
+Okay so I very cautiously changed the code in my simon sub directory for the first time and I was scared to death but I did it and still have all my limbs. looks like it works and now I'm off to get the startup portion to work! The most important command here is the deploy files
+./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s simon
 
 ## CSS
 
