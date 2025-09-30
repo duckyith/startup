@@ -4,25 +4,35 @@
     <meta charset="UTF-8" />
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Out of Line</title>
+    <title>Out Of Line</title>
     <link rel="icon" href="oolicon.ico" />
+    
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <!-- Use header, main, and footer elements to give semantic structure -->
-    <header>
-      <div id="picture" class="picture-box"><img width="400px" src="OutOfLineLogo.png" alt="random" /></div>
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Join Game</a></li>
-          <li><a href="host.html">Host Game</a></li>
-          <li><a href="about.html">About</a></li>
+    <header class="container-fluid text-light">
+      <nav class="navbar fixed-top">
+      <a class="navbar-brand" href="#">Out Of Line</a>
+        <menu class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Join Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="host.html">Host Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
         </menu>
       </nav>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
     </header>
 
     <main>
@@ -51,18 +61,19 @@
       </div>
 
       <br />
-
-      <div>
-        <button>START!</button>
-      </div>
+      <form method="get" action="play.html">
+        <div>
+          <button>START!</button>
+        </div>
+      </form>
       <br />
     </main>
 
-    <footer>
-      <hr />
-      <span class="text-reset">Author Name(s)</span>
-      <br />
-      <a href="https://github.com/webprogramming260/simon-html">GitHub</a>
-    </footer>
+    <footer class="bg-dark text-white-50">
+      <div class="container-fluid">
+        <span class="text-reset">Created by Brady Scott</span>
+        <a class="text-reset" href="https://github.com/duckyith/startup">Source</a>
+      </div>
+      </footer>
   </body>
 </html>

@@ -6,51 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Out Of Line</title>
     <link rel="icon" href="oolicon.ico" />
+    
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div id="picture" class="picture-box"><img width="400px" src="OutOfLineLogo.png" alt="random" /></div>
-    <!-- Use header, main, and footer elements to give semantic structure -->
-    <header>
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Join Game</a></li>
-          <li><a href="host.html">Host Game</a></li>
-          <li><a href="about.html">About </a></li>
+    <header class="container-fluid text-light">
+      <nav class="navbar fixed-top">
+      <a class="navbar-brand" href="#">Out Of Line</a>
+        <menu class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Join Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="host.html">Host Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
         </menu>
       </nav>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
     </header>
 
-    <main>
-      <h2>Login</h2>
-      <form method="get" action="wait.html">
-        <div>
-          <span>@</span>
-          <input type="text" placeholder="your@email.com" />
-        </div>
-        <div>
-          <span>🔒</span>
-          <input type="password" placeholder="password" />
-        </div>
-        <h2>Game Code</h2>
-        <div>
-          <span>🖌️</span>
-          <input type="text" placeholder="game room code" />
-        </div>
-        <button type="submit">Join</button>
-        <button type="submit">Create Account</button>
-      </form>
+    <main class="container-fluid text-center">
+      <div id="picture" class="picture-box"><img width="400px" src="OutOfLineLogo.png" alt="random" /></div>
+      <div>
+        <h1>Login</h1>
+        <form method="get" action="wait.html">
+          <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input class="form-control" type="text" placeholder="your@email.com" />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">🔒</span>
+            <input class="form-control" type="password" placeholder="password" />
+          </div>
+        </form>
+        <h1>Game Code</h1>
+        <form method="get" action="wait.html">
+          <div class="input-group mb-3">
+            <span class="input-group-text">🖌️</span>
+            <input class="form-control" type="game room code" placeholder="enter code" />
+          </div>
+          <button type="submit" class="btn btn-primary">Join</button>
+          <button type="submit" class="btn btn-">Create Account</button>
+        </form>
+      </div>
     </main>
 
-    <footer>
-      <hr />
-      <span class="text-reset">Created by Brady Scott</span>
-      <br />
-      <a href="https://github.com/duckyith/startup">GitHub</a>
-    </footer>
+    <footer class="bg-dark text-white-50">
+      <div class="container-fluid">
+        <span class="text-reset">Created by Brady Scott</span>
+        <a class="text-reset" href="https://github.com/duckyith/startup">Source</a>
+      </div>
+      </footer>
   </body>
 </html>
