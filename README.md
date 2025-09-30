@@ -81,15 +81,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [X] **HTML pages** - I made a couple, Index, Host, About, Wait, an Play
+- [X] **Proper HTML element usage** - I think I did this right, used a wide range, mostly from the simon
+- [X] **Links** - Lots of links to other pages, I think that's what this refers to
+- [X] **Text** - Created lots of different kinds of texts for different purposes
+- [X] **3rd party API placeholder** - The promps are place holders for this 3rd party API, Host Game > START! to see them
+- [X] **Images** - The main title logo in every header was drawn and implemented by me
+- [X] **Login placeholder** - Left from Simon
+- [X] **DB data placeholder** - On the about page, the image I have there have some examples of what other players have drawn in the past, that image is a placeholder for that
+- [X] **WebSocket placeholder** - The Start button and game connection with all the loading in player names on the wait and host pages are supposed to be this
 
 ## 🚀 CSS deliverable
 
