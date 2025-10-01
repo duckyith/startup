@@ -42,6 +42,31 @@ menu {
   border-bottom: solid rgb(182, 182, 182) thin;
 }
 
+span.prompt {
+  display: inline-block;
+  border: solid black thin;
+  padding: 0.2em 0.5em;
+  margin: 0 0.5em;
+  font-size: 1.5em;
+}
+
+p.playerlist_title {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  border: solid black thin;
+  border-bottom: 0;
+}
+
+ul.list {
+  border: solid black thin;
+  padding: 25px;
+  padding-top: 0;
+  margin-top: 0;
+  height: 150px;
+  width: 300px;
+  overflow-y: auto;
+}
+
 menu .nav-item {
   padding: 0 0.3em;
 }

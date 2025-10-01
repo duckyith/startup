@@ -36,46 +36,29 @@
     </header>
 
     <main>
-      <div class="GameRoom">
-        Game Room Code:
-        <span class="GameCode">3Q8H</span>
+      <h2>Round 2 has started</h2>
+      <h3>
+        10 Seconds left!
+      </h3>
+      <div class="playerlist_container">
+        <p class="playerlist_title">
+          Players Left! (1 doodler remains)
+        </p>
+        <ul class="players list">
+          <li class="player-name">iLikeToDraw</li>
+          <li class="player-name">SillySamon</li>
+          <li class="player-name">PeePeePooPoo</li>
+          <li class="player-name">Dad</li>
+          <li class="player-name">Johnny</li>
+        </ul>
       </div>
-      <h2>Look at the Host Screen or doodle while you wait</h2>
-      <!-- I decided to put this silly disfunctional AI canvas here
-       for players to jut play around with while they wait-->
-      <canvas id="pad" width="400" height="300" style="border:1px solid black; cursor:crosshair;"></canvas>
-      <script>
-        const canvas = document.getElementById("pad");
-        const ctx = canvas.getContext("2d");
-
-        let drawing = false;
-
-        canvas.addEventListener("mousedown", () => { drawing = true; });
-        canvas.addEventListener("mouseup", () => { drawing = false; ctx.beginPath(); });
-        canvas.addEventListener("mousemove", draw);
-
-        function draw(event) {
-          if (!drawing) return;
-
-          ctx.lineWidth = 2;
-          ctx.lineCap = "round";
-          ctx.strokeStyle = "black";
-
-          ctx.lineTo(event.offsetX, event.offsetY);
-          ctx.stroke();
-          ctx.beginPath();
-          ctx.moveTo(event.offsetX, event.offsetY);
-        }
-      </script>
-      <div class="canvas_button_group">
-        <button class="btn btn-secondary" type="button">Clear</button>
-        <button class="btn btn-secondary" type="button">Erase</button>
-        <button class="btn btn-secondary" type="button">Draw</button>
-        <button class="btn btn-secondary" type="button">Undo</button>
-      </div>
-      <br />
-      <div class="GameRoom">
-        Waiting for host to start the game...
+      <div class="playerlist_container">
+        <p class="playerlist_title">
+          Players Voted out!
+        </p>
+        <ul class="players list">
+          <li class="player-name">PLEASEDONTVOTEME was voted out on round 1!</li>
+        </ul>
       </div>
       <form method="get" action="play.html">
         <div>

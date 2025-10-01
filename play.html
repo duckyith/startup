@@ -38,9 +38,11 @@
     <main>
       <h2>Round 1</h2>
       <h3>The promps are:</h3>
-      <input type="text" value="Doorway" readonly />
-      <input type="text" value="Mountain" readonly />
-      <input type="text" value="Pirate" readonly />
+      <div class="prompts_container">
+        <span class="prompt" id="prompt1">Pirate</span>
+        <span class="prompt" id="prompt2">Mountain</span>
+        <span class="prompt" id="prompt3">???</span>
+      </div>
 
       <canvas id="pad" width="400" height="300" style="border:1px solid black; cursor:crosshair;"></canvas>
       <!-- This is just a quick Chatgpt placeholder script
@@ -69,8 +71,18 @@
           ctx.moveTo(event.offsetX, event.offsetY);
         }
       </script>
-      
+      <div class="canvas_button_group">
+        <button class="btn btn-secondary" type="button">Clear</button>
+        <button class="btn btn-secondary" type="button">Erase</button>
+        <button class="btn btn-secondary" type="button">Draw</button>
+        <button class="btn btn-secondary" type="button">Undo</button>
+      </div>
       <h3>Time remaining: 10 seconds!</h3>
+      <form method="get" action="play.html">
+        <div>
+          <button class="btn">click to advance: temp for testing</button>
+        </div>
+      </form>
     </main>
 
     <footer class="bg-dark text-white-50">
