@@ -95,12 +95,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
+- [X] **Header, footer, and main content body** - Made my header mostly based off simon but white theme and solid, body content was completly changed
+- [X] **Navigation elements** - The header has these, spent a good amount of time making it behave the way I wanted. Favorite feature is scrolling on about page
+- [X] **Responsive to window resizing** - Lot's of flex, all in the main.css file, I didn't need to do too much unique stuff so I kept it all there to keep it tidy
+- [X] **Application elements** - A variety, mostly buttons and text tho, some lists
+- [X] **Application text content** - The text didn't really need to be altered much from the bootstrap simon used (that I also borrowed)
+- [X] **Application images** - There are images all over the place, most of them placeholder besides the logo and lower about image
 
 ## 🚀 React part 1: Routing deliverable
 
