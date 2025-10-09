@@ -35,52 +35,25 @@ Okay so I very cautiously changed the code in my simon sub directory for the fir
 
 ## CSS
 
-This took a couple hours to get it how I wanted. It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
+Cascading Style Sheets as the name suggests, applys a high level component's properties to all following elements. The last instructing for styling will take presidence.
 
-Bootstrap seems a bit like magic. It styles things nicely, but is very opinionated. You either do, or you do not. There doesn't seem to be much in between.
-
-I did like the navbar it made it super easy to build a responsive header.
-
-```html
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand">
-            <img src="logo.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
-            Calmer
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="play.html">Play</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Logout</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-```
-
-I also used SVG to make the icon and logo for the app. This turned out to be a piece of cake.
-
-```html
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100" height="100" fill="#0066aa" rx="10" ry="10" />
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="72" font-family="Arial" fill="white">C</text>
-</svg>
-```
+flex is mega important for centering things in ways that change with the browser size, very important if you want your website to look good on all different sized divices
 
 ## React Part 1: Routing
 
-Setting up Vite and React was pretty simple. I had a bit of trouble because of conflicting CSS. This isn't as straight forward as you would find with Svelte or Vue, but I made it work in the end. If there was a ton of CSS it would be a real problem. It sure was nice to have the code structured in a more usable way.
+Setting up the files so that Vite can "compile" (not really but like but it together) the html, css and java script for the browser. I really like the new orginization, makes a lot more sense but it's a shame I have to reconfigure so much.
+
+Important commands:
+(note, you'll need node.js to run npm commands)
+
+npm init -y
+npm install vite@latest -D
+npm install bootstrap react-bootstrap
+npm install react react-dom react-router-dom
+
+npm run dev
+(dev is a script we made in package.json which runs vite)
+o to enter browser
 
 ## React Part 2: Reactivity
 
