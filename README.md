@@ -106,9 +106,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - I did not complete this part of the deliverable.
+- [X] **Bundled using Vite** - I installed all the things for vite, set up my json files and ran tests with vite
+- [X] **Components** - I made lots of components with my previously beutiful pages, however few are currently accessable
+- [X] **Router** - I love all the directory organization and not having to see the .html in the browser address bar
 
 ## 🚀 React part 2: Reactivity deliverable
 
