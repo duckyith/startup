@@ -26,7 +26,7 @@ It's the ART of DECEPTION! Litterally! In this game a croud of people, or just a
 
 ### Design
 
-![Design image](AllScreens.png)
+![Design image](public/AllScreens.png)
 
 Here is some examples of what the game will look like including the main screen when you first enter the website, the game screen when you are playing, and a voting screen.
 
