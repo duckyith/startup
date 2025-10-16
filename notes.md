@@ -2,7 +2,11 @@
 
 MY NOTES
 I'm still cautious about what I should change in all these documents and just kind of throwing myself into the deepend here but I learned a couple things from this. Most notably:
-The commands
+
+## Commands
+
+Git commands
+- git clone (url) -> to copy repository
 - git add
 - git commit
 - git push
@@ -11,7 +15,23 @@ The commands
 - git pull
 and some general concepts of how to clone and use the repositories
 
-[My startup - Simon](https://simon.cs260.click)
+Console commands:
+- chmod - change permissions,
+- pwd - print working directory
+- cd - change directory
+- ls - list files
+- vim/nano - text editors
+- mkdir - make directory
+- mv - move/rename
+- rm - remove
+- man - manual
+- ssh - remote shell
+- ps - processes
+- wget - download files
+- sudo - run as admin
+(-l flag: list with more info, -a flag: list hidden as well)
+
+[My startup - Out Of Line](https://startup.outofline.click)
 
 ## Helpful links
 
@@ -24,6 +44,12 @@ and some general concepts of how to clone and use the repositories
 My IP address is: 54.235.224.131
 Impotant AWS Pages: Instances | EC2
 
+banana.fruit.bozo.click <- example domain
+TLD (Top level domain): .click, root domain: bozo.click, subdomain: fruit.bozo.click (and banana.fruit.bozo.click is a nested
+subdomain)
+
+HTTPS requires a valid SSL/TLS certificate. Securing your website is a good idea.
+
 ## Caddy
 
 No problems worked just like it said in the [instruction](https://github.com/webprogramming260/.github/blob/main/profile/webServers/https/https.md).
@@ -33,11 +59,44 @@ No problems worked just like it said in the [instruction](https://github.com/web
 Okay so I very cautiously changed the code in my simon sub directory for the first time and I was scared to death but I did it and still have all my limbs. looks like it works and now I'm off to get the startup portion to work! The most important command here is the deploy files
 ./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s simon
 
+<!DOCTYPE html> 
+to make it an html file
+<meta charset="UTF-8">
+meta data that can tell devices we've considered them and will take care of the formatting, this example says we use the character set of UTF - 8
+<link rel="stylesheet" href="style.css">
+to use a CSS file for formatting this page
+
 ## CSS
 
 Cascading Style Sheets as the name suggests, applys a high level component's properties to all following elements. The last instructing for styling will take presidence.
 
 flex is mega important for centering things in ways that change with the browser size, very important if you want your website to look good on all different sized divices
+
+#message{
+  This is like getElementByID in JS, add your styling here
+}
+.div{
+  The dot is for classes,  even tho if this is second, the ID is more   specific and will take priority
+}
+
+## JS
+
+<script src="counter.js"></script>
+
+The following JS code takes an element made in an html file and modifys it under certain conditions. Message in the html file is an empty p element which will keep it hidden until the message is modified by the JS to have text and style it to a green color. This change happens on the Event "submit", there are others like onChange and click.
+
+```js
+const message = document.getElementByID("message");
+form.addEvenListener("submit", (e) => (
+  const email = document.getElementById('email').value
+  if (email.includes('@')) {
+    message.textContent = "email accepted"
+    message.style.color = 'green'
+  }
+```
+2  examples of the same function (in both cases you have to have an ID'd element recognized first
+.addEventListener("click", () => {}
+.onclick = () => {}
 
 ## React Part 1: Routing
 
