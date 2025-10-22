@@ -1,13 +1,23 @@
 import React from 'react';
 
 export function About() {
+  const [imageUrl1, setImageUrl1] = React.useState('examplePlaceholder1.png');
+  const [imageUrl2, setImageUrl2] = React.useState('examplePlaceholder2.png');
+  const [imageUrl3, setImageUrl3] = React.useState('examplePlaceholder3.png');
+
+  React.useEffect(() => {
+      setImageUrl1(`examplePlaceholder1.png`);
+      setImageUrl2(`examplePlaceholder2.png`);
+      setImageUrl3(`examplePlaceholder3.png`);
+    }, []);
+
   return (
     <main class="about">
       <div id="picture" class="picture-box"><img width="400px" src="OutOfLineLogo.png" alt="random" /></div>
       <div class="image-row"> 
-        <img src="examplePlaceholder1.png"></img>
-        <img src="examplePlaceholder2.png"></img>
-        <img src="examplePlaceholder3.png"></img>
+        <img src={imageUrl1} alt="User Drawings"/>
+        <img src={imageUrl2} alt="User Drawings"/>
+        <img src={imageUrl3} alt="User Drawings"/>
       </div>
       <p>
         It's the ART of DECEPTION! Litterally! In this game a croud of people, or just a few friends get together to speed

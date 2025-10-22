@@ -1,37 +1,42 @@
-import React from 'react';
+import React, {useContext} from 'react';
+
+import { useNavigate } from 'react-router-dom';
+import { CountdownTimer } from '../waitHost/timer';
+import { GameContext } from '../GameContext.jsx';
 
 export function WaitHost() {
+  let navigate = useNavigate();
+  const {players, round} = useContext(GameContext);
+  const {eliminatedPlayers} = useContext(GameContext);
+  const {doodlers} = useContext(GameContext);
+
   return (
     <main>
-      <h2>Round 2 has started</h2>
-      <h3>
-        10 Seconds left!
-      </h3>
-      <div class="playerlist_container">
-        <p class="playerlist_title">
-          Players Left! (1 doodler remains)
+      <h2>Round {round} has started</h2>
+      <CountdownTimer initialSeconds={60} />
+      <div className="playerlist_container">
+        <p className="playerlist_title">
+          Players Left! ({doodlers.length} doodlers remains)
         </p>
-        <ul class="players list">
-          <li class="player-name">iLikeToDraw</li>
-          <li class="player-name">SillySamon</li>
-          <li class="player-name">PeePeePooPoo</li>
-          <li class="player-name">Dad</li>
-          <li class="player-name">Johnny</li>
+        <ul className= "players list">
+          {players.map((player, index) => (
+            <li key={index}>{player}</li>
+          ))}
         </ul>
       </div>
-      <div class="playerlist_container">
-        <p class="playerlist_title">
+      <div className="playerlist_container">
+        <p className="playerlist_title">
           Players Voted out!
         </p>
-        <ul class="players list">
-          <li class="player-name">PLEASEDONTVOTEME was voted out on round 1!</li>
+        <ul className= "players list">
+          {eliminatedPlayers.map((player, index) => (
+            <li key={index}>{player}</li>
+          ))}
         </ul>
       </div>
-      <form method="get" action="voteHost.html">
         <div>
-          <button class="btn">click to advance: temp for testing</button>
+          <button className="btn" onClick={() => navigate('/voteHost')}>click to advance: temp for testing</button>
         </div>
-      </form>
     </main>
   );
 }

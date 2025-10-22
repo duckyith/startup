@@ -13,50 +13,54 @@ import { VoteHost } from './voteHost/voteHost';
 import { Wait } from './wait/wait';
 import { WaitHost } from './waitHost/waitHost';
 
+import { GameProvider } from './GameContext.jsx';
+
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="body">
-        <header className="container-fluid text-light">
-          <nav className="navbar fixed-top">
-          <div className="navbar-brand" href="#">
-            Out Of Line
+    <GameProvider>
+      <BrowserRouter>
+        <div className="body">
+          <header className="container-fluid text-light">
+            <nav className="navbar fixed-top">
+            <div className="navbar-brand" href="#">
+              Out Of Line
+              </div>
+                <menu className="navbar-nav">
+                <li className="nav-item">
+                    <NavLink className="nav-link active" to="/">Join Game</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="host">Host Game</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="about">About</NavLink>
+                </li>
+                </menu>
+            </nav>
+          </header>
+
+          <Routes>
+            <Route path='/' element={<Join />} exact />
+            <Route path='/host' element={<Host />} />
+            <Route path='/about' element={<About />} />
+
+            <Route path='/play' element={<Play />} />
+            <Route path='/vote' element={<Vote />} />
+            <Route path='/voteHost' element={<VoteHost />} />
+            <Route path='/wait' element={<Wait />} />
+            <Route path='/waitHost' element={<WaitHost />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+
+          <footer className="bg-dark text-white-50">
+            <div className="container-fluid">
+              <span className="text-reset">Created by Brady Scott</span>
+              <a className="text-reset" href="https://github.com/duckyith/startup">Source</a>
             </div>
-              <menu className="navbar-nav">
-              <li className="nav-item">
-                  <NavLink className="nav-link active" to="/">Join Game</NavLink>
-              </li>
-              <li className="nav-item">
-                  <NavLink className="nav-link" to="host">Host Game</NavLink>
-              </li>
-              <li className="nav-item">
-                  <NavLink className="nav-link" to="about">About</NavLink>
-              </li>
-              </menu>
-          </nav>
-        </header>
-
-        <Routes>
-          <Route path='/' element={<Join />} exact />
-          <Route path='/host' element={<Host />} />
-          <Route path='/about' element={<About />} />
-
-          <Route path='/play' element={<Play />} />
-          <Route path='/vote' element={<Vote />} />
-          <Route path='/voteHost' element={<VoteHost />} />
-          <Route path='/wait' element={<Wait />} />
-          <Route path='/waitHost' element={<WaitHost />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-
-        <footer className="bg-dark text-white-50">
-          <div className="container-fluid">
-            <span className="text-reset">Created by Brady Scott</span>
-            <a className="text-reset" href="https://github.com/duckyith/startup">Source</a>
-          </div>
-        </footer>
-      </div>
-    </BrowserRouter>
+          </footer>
+        </div>
+      </BrowserRouter>
+    </GameProvider>
   );
 }
 

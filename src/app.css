@@ -122,4 +122,15 @@ div.vote_button_group {
   display: flex;
   justify-content: center;
   gap: 100px;
+  padding-top : 20px;
+}
+
+#votes {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+.Canvas {
+  margin-top: 10px;
 }
