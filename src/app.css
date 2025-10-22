@@ -142,3 +142,7 @@ div.vote_button_group {
   border: solid black thin;
   border-radius: 10px;
 }
+
+canvas {
+  touch-action: none;
+}
