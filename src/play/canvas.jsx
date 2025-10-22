@@ -88,9 +88,9 @@
             onMouseUp={stopDrawing}
             onMouseLeave={stopDrawing}
 
-            onTouchStart={(e) => startDrawing(convertTouch(e))}
-            onTouchMove={(e) => draw(convertTouch(e))}
-            onTouchEnd={stopDrawing}
+            onTouchStart={(e) => {e.preventDefault(); startDrawing(convertTouch(e));}}
+            onTouchMove={(e) => {e.preventDefault(); draw(convertTouch(e))}}
+            onTouchEnd={(e) => e.preventDefault() && stopDrawing()}
             ></canvas>
             <div className="canvas_button_group">
                 <button className="btn btn-secondary"type="button"
