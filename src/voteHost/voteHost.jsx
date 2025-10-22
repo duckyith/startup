@@ -11,11 +11,11 @@ export function VoteHost() {
   const [showFirstList, setShowFirstList] = React.useState(true);
   const [showSecondList, setShowSecondList] = React.useState(false);
 
-  const eliminate = () => {// simulate eliminations
+  const eliminate = () => {// simulate eliminations (in a real game, we take the top (eliminated count) number of voted players )
     const tempPlayers = [...players];
     const tempEliminatedPlayers = [...eliminatedPlayers];
     tempPlayers.sort(() => Math.random() - 0.5); // Shuffle players
-    let eliminatedCount = Math.max(1, Math.floor(tempPlayers.length / 3));
+    let eliminatedCount = Math.max(0, Math.floor(tempPlayers.length / 3)+1);
     for (let i = 0; i < eliminatedCount; i++) {
       const eliminatedPlayer = tempPlayers.shift(); // remove from active players
       tempEliminatedPlayers.push(eliminatedPlayer);

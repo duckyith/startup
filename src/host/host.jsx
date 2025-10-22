@@ -14,7 +14,7 @@ export function Host() {
     const addRandomPlayer = () => {
       if (!randomsJoining) return;
       setPlayers(prev => [...prev, `Player${prev.length + 1}`]);
-      const nextDelay = Math.floor(Math.random() * (1000 - 10000 + 1)) + 10000; // A new player joins every 2-5 seconds
+      const nextDelay = Math.floor(Math.random() * (500 - 2000 + 1)) + 2000; // A new player joins every 1-2 seconds
       setTimeout(() => {addRandomPlayer();}, nextDelay);
     };
     addRandomPlayer();
@@ -60,7 +60,7 @@ export function Host() {
               tempDoodlers.push(tempPlayers[i]);
             }
             setDoodlers(tempDoodlers);
-            console.log("Doodlers:", doodlers);
+            console.log("Doodlers:", tempDoodlers);
             navigate('/waitHost')}}>START!</button>
         </div>
       </div>

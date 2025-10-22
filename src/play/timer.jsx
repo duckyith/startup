@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-import { useNavigate } from 'react-router-dom';
-
-export function CountdownTimer({ initialSeconds }) {
-  let navigate = useNavigate();
+export function CountdownTimer({ initialSeconds, onTimeUp }) {
   const [secondsLeft, setSecondsLeft] = useState(initialSeconds);
+  const timeUpCalled = useRef(false); // track if onTimeUp has already fired
 
   useEffect(() => {
-    if (secondsLeft <= 0){
-        navigate('/vote')
-        return;
+    if (secondsLeft <= 0) {
+      if (!timeUpCalled.current && typeof onTimeUp === 'function') {
+        onTimeUp();
+        timeUpCalled.current = true; // prevent future calls
+      }
+      return;
     }
+
     const timer = setTimeout(() => {
       setSecondsLeft(secondsLeft - 1);
     }, 1000);

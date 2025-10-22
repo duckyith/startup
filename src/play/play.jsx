@@ -26,10 +26,6 @@ export function Play() {
         <span className="prompt" id="prompt3">{thirdPrompt}</span>
       </div>
       <CanvasArea></CanvasArea>
-      <CountdownTimer initialSeconds={60} />
-      <div>
-        <button className="btn" onClick={() => navigate('/vote')}>click to advance: temp for testing</button>
-      </div>
     </main>
   );
 }

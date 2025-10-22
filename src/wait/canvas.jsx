@@ -51,6 +51,17 @@
         const previous = undoStack.current.pop();
         ctx.putImageData(previous, 0, 0);
     };
+    //Add touch screen support for my mobile friends :)
+    const convertTouch = (e) => {
+        const rect = canvasRef.current.getBoundingClientRect();
+        const touch = e.touches[0];
+        return {
+            nativeEvent: {
+            offsetX: touch.clientX - rect.left,
+            offsetY: touch.clientY - rect.top
+            }
+        };
+        };
     return (
         <div className="Canvas">
             <canvas
@@ -63,6 +74,10 @@
             onMouseMove={draw}
             onMouseUp={stopDrawing}
             onMouseLeave={stopDrawing}
+            
+            onTouchStart={(e) => startDrawing(convertTouch(e))}
+            onTouchMove={(e) => draw(convertTouch(e))}
+            onTouchEnd={stopDrawing}
             ></canvas>
             <div className="canvas_button_group">
                 <button className="btn btn-secondary"type="button"

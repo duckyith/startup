@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import { CountdownTimer } from './timer';
+import { GameContext } from '../GameContext.jsx';
 
 export function VotePanel() {
-  const images = ['examplePlaceholder1.png', 'examplePlaceholder2.png', 'examplePlaceholder3.png'];
-  const [imageUrls, setImageUrls] = useState(images);
+  const { imagesList, setImagesList } = useContext(GameContext);
+  const [images, setImageUrls] = useState([imagesList[0], imagesList[1], imagesList[2]]);
   const [votes, setVotes] = useState([]);
   
   const [showButtons, setShowButtons] = useState(true);
 
-  const randomImage = () => images[Math.floor(Math.random() * images.length)];
-
+  const randomImage = () => imagesList[Math.floor(Math.random() * imagesList.length)];
+  //When this is all real, instead of choosing a random image from our full list
+  //we'll shuffle a copy of the list once and compare the vote list to that
+  //if we mod the shuffled list by 3 we should be able to count who got the most votes
   const newImages = () => setImageUrls([randomImage(), randomImage(), randomImage()]);
 
   const handleVote = (choice) => {
@@ -26,8 +29,8 @@ export function VotePanel() {
   return (
     <div className="VotePanel">
       <div className="image-row">
-        {imageUrls.map((url, index) => (
-          <img key={index} src={url} alt={`Option ${index + 1}`} />
+        {images.map((url, index) => (
+          <img className= "voteImages" key={index} src={url} alt={`Option ${index + 1}`} />
         ))}
       </div>
 
