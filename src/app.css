@@ -121,7 +121,7 @@ div.canvas_button_group {
 div.vote_button_group {
   display: flex;
   justify-content: center;
-  gap: 200px;
+  gap: clamp(1px, 20vw, 200px);
   padding-top : 20px;
 }
 
@@ -136,8 +136,9 @@ div.vote_button_group {
 }
 
 .voteImages {
-  width: 250px;
-  height: 200px;
+  max-width: 250px;
+  width: 30vw;
+  height: auto;
   object-fit: cover;
   border: solid black thin;
   border-radius: 10px;
