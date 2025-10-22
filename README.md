@@ -114,8 +114,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [X] **All functionality implemented or mocked out** - I added a TON of functionality, including simulated players joining the host's room and then the rounds increase as a third of players are voted out and keeping track of the doodlers. In the join branch of components, there is now full canvas functionality as well as saving those images and displaying them in the vote sections. (It starts with placeholder images, just keep voting till you see your picture)(It also saves between rounds for now)
+- [X] **Hooks** - I saved lots of variables in GameContext.jsx that can be accessed from all files, they manipulate that information and change things based on events including buttons clicked, timers running out of time and the game code being changed.
 
 ## 🚀 Service deliverable
 
