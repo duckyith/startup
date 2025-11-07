@@ -140,6 +140,20 @@ Handling the toggling of the checkboxes was particularly interesting.
 </div>
 ```
 
+## End points and APIs
+
+node commands
+- npm init -y
+- npm install express
+- npm install cookie-parser bcryptjs uuid
+- npm dev run (o to render, q to quit)
+
+running the server
+- node index.js & (& means background)
+- fg (bring to foreground to ctrl+c to kill)
+- host=http://localhost:3000 (I think this means connect to whatever is on port 3000)
+
+
 # CS260 – Midterm Review Notes
 
 This document summarizes all key topics likely to appear on the midterm.  
