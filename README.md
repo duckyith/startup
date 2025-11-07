@@ -121,12 +121,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Supports registration, login, logout, and restricted endpoint** - I did not complete this part of the deliverable.
+- [X] **Node.js/Express HTTP service** - Added the service directory with json node modules and packages
+- [X] **Static middleware for frontend** - I'm still fuzzy on what's middleware and what's not but I'm using some endpoints declared by simon as middleware
+- [X] **Calls to third party endpoints** - Found a silly API that generates random words within catagories. Now we get actual random words for the prompts, first is an animal, second a sport and the last one gives us a brainrot word hehehe.
+- [X] **Backend service endpoints** - All related to login, didn't need the scores. Might add more later, depends how I decide to store the images gathered in websocket deliverable
+- [X] **Frontend calls service endpoints** - Within the login we call to the backend to store user information captured by the frontend such as the username and password
+- [X] **Supports registration, login, logout, and restricted endpoint** - My login page now closely resembles the simon one with some modifications. Upon login it takes you to the join page (what used to be my login page) which only has one input for entering a game code. I liked the way simon did it better plus now I can restrict access to Host and Join until AFTER login.
 
 
 ## 🚀 DB deliverable
