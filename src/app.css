@@ -147,3 +147,10 @@ div.vote_button_group {
 canvas {
   touch-action: none;
 }
+
+.TopLogo img {
+  display: block;
+  width: 50vw;
+  max-width: 500px;
+  margin-bottom: 10vw;
+}

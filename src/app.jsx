@@ -3,9 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
 import { Join } from './join/join';
 import { Host } from './host/host';
 import { About } from './about/about';
+
+import { AuthState } from './login/authState';
 
 import { Play } from './play/play';
 import { Vote } from './vote/vote';
@@ -16,6 +19,10 @@ import { WaitHost } from './waitHost/waitHost';
 import { GameProvider } from './GameContext.jsx';
 
 export default function App() {
+  const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+  const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+  const [authState, setAuthState] = React.useState(currentAuthState);
+
   return (
     <GameProvider>
       <BrowserRouter>
@@ -27,11 +34,18 @@ export default function App() {
               </div>
                 <menu className="navbar-nav">
                 <li className="nav-item">
-                    <NavLink className="nav-link active" to="/">Join Game</NavLink>
+                    <NavLink className="nav-link" to="/">Login</NavLink>
                 </li>
-                <li className="nav-item">
-                    <NavLink className="nav-link" to="host">Host Game</NavLink>
-                </li>
+                {authState === AuthState.Authenticated && (
+                  <li className="nav-item">
+                      <NavLink className="nav-link" to="join">Join Game</NavLink>
+                  </li>
+                )}
+                {authState === AuthState.Authenticated && (
+                  <li className="nav-item">
+                      <NavLink className="nav-link" to="host">Host Game</NavLink>
+                  </li>
+                )}
                 <li className="nav-item">
                     <NavLink className="nav-link" to="about">About</NavLink>
                 </li>
@@ -40,7 +54,21 @@ export default function App() {
           </header>
 
           <Routes>
-            <Route path='/' element={<Join />} exact />
+            <Route
+              path='/'
+              element={
+                <Login
+                  userName={userName}
+                  authState={authState}
+                  onAuthChange={(userName, authState) => {
+                    setAuthState(authState);
+                    setUserName(userName);
+                  }}
+                />
+              }
+              exact
+            />
+            <Route path='/join' element={<Join />} />
             <Route path='/host' element={<Host />} />
             <Route path='/about' element={<About />} />
 
