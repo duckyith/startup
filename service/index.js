@@ -62,7 +62,7 @@ const verifyAuth = async (req, res, next) => {
 };
 
 // My own Endpoint that for now just saves the gamecode and prints it to the console
-apiRouter.post('/gamecode', verifyAuth, (req, res) => {
+apiRouter.post('/gamecode', (req, res) => {
   gameCode = req.body.code;
   console.log("Game code saved:", gameCode);
   res.send({ success: true, gameCode });
