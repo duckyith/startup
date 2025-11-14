@@ -6,7 +6,7 @@ const app = express();
 
 const authCookieName = 'token';
 let users = [];
-let scores = [];
+let gameCode = null;
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
 app.use(express.json());
@@ -61,15 +61,11 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
-// GetScores
-apiRouter.get('/scores', verifyAuth, (_req, res) => {
-  res.send(scores);
-});
-
-// SubmitScore
-apiRouter.post('/score', verifyAuth, (req, res) => {
-  scores = updateScores(req.body);
-  res.send(scores);
+// My own Endpoint that for now just saves the gamecode and prints it to the console
+apiRouter.post('/gamecode', verifyAuth, (req, res) => {
+  gameCode = req.body.code;
+  console.log("Game code saved:", gameCode);
+  res.send({ success: true, gameCode });
 });
 
 // Default error handler

@@ -8,6 +8,16 @@ export function Join(props) {
   let navigate = useNavigate();
   const {gameCode, setGameCode} = useContext(GameContext);
 
+  async function sendCodeToBackend() {
+    await fetch("/api/gamecode", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code: gameCode }),
+    });
+
+    navigate('/wait');
+  }
+
   return (
     <main className="home container-fluid text-center">
       <div>
@@ -18,7 +28,7 @@ export function Join(props) {
           <input className="form-control" type="game room code" placeholder="enter code" value={gameCode} onChange={(e) => setGameCode(e.target.value)}/>
         </div>
         
-        <Button variant='primary' onClick={() => navigate('/wait')}>
+        <Button variant='primary' onClick={sendCodeToBackend}>
           Join room
         </Button>
       </div>

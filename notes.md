@@ -146,12 +146,13 @@ node commands
 - npm init -y
 - npm install express
 - npm install cookie-parser bcryptjs uuid
-- npm dev run (o to render, q to quit)
+- npm run dev (o to render, q to quit)
 
 running the server
 - node index.js & (& means background)
 - fg (bring to foreground to ctrl+c to kill)
 - host=http://localhost:3000 (I think this means connect to whatever is on port 3000)
+- also you can press f5 in vs code to run index.js and then run vite to simulate it. (npm run dev (o to render, q to quit))
 
 
 # CS260 – Midterm Review Notes
