@@ -146,6 +146,7 @@ node commands
 - npm init -y
 - npm install express
 - npm install cookie-parser bcryptjs uuid
+- npm install mongodb
 - npm run dev (o to render, q to quit)
 
 running the server
