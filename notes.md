@@ -43,6 +43,8 @@ Console commands:
 
 My IP address is: 54.235.224.131
 Impotant AWS Pages: Instances | EC2
+ssh -i C:/Users/brady/Downloads/OOLduckyith.pem ubuntu@outofline.click
+:my key and the domain I'm sshing into
 
 banana.fruit.bozo.click <- example domain
 TLD (Top level domain): .click, root domain: bozo.click, subdomain: fruit.bozo.click (and banana.fruit.bozo.click is a nested
@@ -154,6 +156,12 @@ running the server
 - fg (bring to foreground to ctrl+c to kill)
 - host=http://localhost:3000 (I think this means connect to whatever is on port 3000)
 - also you can press f5 in vs code to run index.js and then run vite to simulate it. (npm run dev (o to render, q to quit))
+
+## Service
+
+to see your services running:
+- pm2 list
+- pm2 logs <service>
 
 
 # CS260 – Midterm Review Notes
